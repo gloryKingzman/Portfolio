@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: rgb(255, 215, 14);
+}
+
+div#header {
+    position: fixed;
+    width: 100%;
+    display: block;
+}
+
+.header-inner {
+    display: flex;
+    flex-direction: row;
+    background: hotpink;
+}
+
+svg {
+    width: 60px;
+    float: left;
+}
+
+ul#navbar {
+    background: green;
+    float: right !important;
+}
+
+#hero {
+    width: 100vw;
+    height: 100vh;
+    /* background: blanchedalmond;
+     transform: skewY(3deg);*/
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+img.friend {
+    width: 25vw;
+    position: absolute;
+    top: 80px;
+    right: 200px;
+}
+
+.hero-content {
+    /* transform: skewY(-3deg); */
+    width: fit-content;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-content::after {
+    content: url(/images/strike.png);
+    /* width: 100%; */
+    /* height: 20px; */
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 60px;
+}
+
+.hero-content h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 6em;
+}
+
+
+/*span.strike {
+    text-decoration-line: line-through;
+}*/
+
+section#about {
+    position: relative;
+    z-index: 1;
+    background: rgb(51, 51, 53);
+    transform: skewY(3deg);
+    height: 90vh;
+    top: 35px;
+}
+
+div.about-inner {
+    transform: skewY(-5deg);
+}
+
+section#projects {
+    position: relative;
+    z-index: 1;
+    background: rgb(255, 215, 14);
+    transform: skewY(3deg);
+    height: 90vh;
+    top: 35px;
+}
+
+div.projects-inner {
+    transform: skewY(-5deg);
+}
+
+div#footer {
+    background: rgb(243, 243, 243);
+    height: 40vh;
+}
