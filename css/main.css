@@ -4,18 +4,55 @@ body {
     padding: 0;
     overflow-x: hidden;
     background: rgb(255, 215, 14);
+    /*animation-name: color;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-duration: 20s;
+    transition: all ease-in-out;*/
 }
+
+
+/*
+@keyframes color {
+    0% {
+        background: rgb(255, 215, 14);
+    }
+    25% {
+        background: #3204fc;
+    }
+    50% {
+        background: #3ef892;
+    }
+    75% {
+        background: #3ef2f8;
+    }
+    100% {
+        background: rgb(255, 215, 14)s;
+    }
+}
+*/
 
 div#header {
     position: fixed;
     width: 100%;
+    z-index: 999;
     display: block;
+    background: #ffd70e;
+    /*background: transparent;
+    box-shadow: 0px 2px 2px 4px rgba(51, 51, 53, 0.2);
+*/
 }
 
 .header-inner {
-    display: flex;
-    flex-direction: row;
-    background: hotpink;
+    /* width: 100%; */
+    /* display: block; */
+    /* flex-direction: row;
+    background: #ffd70e; */
+    padding: 10px 20px 0 20px;
+}
+
+div#logo {
+    display: inline-block;
 }
 
 svg {
@@ -23,10 +60,41 @@ svg {
     float: left;
 }
 
-ul#navbar {
-    background: green;
+div#nav {
+    position: relative;
+    right: 0;
     float: right !important;
 }
+
+ul#navbar {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li a.nav-link {
+    padding: 20px 20px;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a.nav-link:hover,
+a.nav-link:active,
+{
+    border-bottom: 3px solid black;
+}
+
+li {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+
+/*Hero start*/
 
 #hero {
     width: 100vw;
@@ -69,6 +137,14 @@ img.friend {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 6em;
+    margin-bottom: 0;
+}
+
+.hero-content p {
+    margin-top: 0;
+    font-size: 1.2em;
+    width: 50vw;
+    margin: auto;
 }
 
 
@@ -82,7 +158,7 @@ section#about {
     background: rgb(51, 51, 53);
     transform: skewY(3deg);
     height: 90vh;
-    top: 35px;
+    top: 150px;
 }
 
 div.about-inner {
@@ -100,6 +176,11 @@ section#projects {
 
 div.projects-inner {
     transform: skewY(-5deg);
+}
+
+.project-container {
+    padding: 20px;
+    background: white;
 }
 
 div#footer {
