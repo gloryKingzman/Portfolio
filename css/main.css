@@ -4,11 +4,23 @@ body {
     padding: 0;
     overflow-x: hidden;
     background: rgb(255, 215, 14);
+    background: white;
+    position: relative;
     /*animation-name: color;
     animation-iteration-count: infinite;
     animation-delay: 5s;
     animation-duration: 20s;
     transition: all ease-in-out;*/
+}
+
+#side {
+    background: #f9f7f8;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    /* left: 30px; */
+    top: 0;
 }
 
 
@@ -35,10 +47,11 @@ body {
 div#header {
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 999999;
     display: block;
-    background: #ffd70e;
-    /*background: transparent;
+    /*background: #ffd70e;
+    background: white;
+    background: transparent;
     box-shadow: 0px 2px 2px 4px rgba(51, 51, 53, 0.2);
 */
 }
@@ -55,6 +68,10 @@ div#logo {
     display: inline-block;
 }
 
+script {
+    float: right;
+}
+
 svg {
     width: 60px;
     float: left;
@@ -64,6 +81,12 @@ div#nav {
     position: relative;
     right: 0;
     float: right !important;
+}
+
+@media screen and (max-width: 900px) {
+    div#nav {
+        display: none;
+    }
 }
 
 ul#navbar {
@@ -76,13 +99,12 @@ ul#navbar {
 li a.nav-link {
     padding: 20px 20px;
     list-style-type: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
 a.nav-link:hover,
-a.nav-link:active,
-{
+a.nav-link:active {
     border-bottom: 3px solid black;
 }
 
@@ -114,8 +136,8 @@ img.friend {
 }
 
 .hero-content {
-    /* transform: skewY(-3deg); */
-    width: fit-content;
+    /* transform: skewY(-3deg);
+    width: 30vw; */
     font-family: 'Raleway', sans-serif;
     position: absolute;
     top: 60%;
@@ -123,15 +145,28 @@ img.friend {
     transform: translate(-50%, -50%);
 }
 
-.hero-content::after {
-    content: url(/images/strike.png);
-    /* width: 100%; */
-    /* height: 20px; */
+
+/*
+.hero-content::before {
+    content: url(/images/friend.png);
+   
     position: absolute;
     display: inline-block;
-    top: 0;
-    right: 60px;
-}
+    top: -20px;
+    right: 1px;
+    z-index: 9999;
+}*/
+
+
+/*
+.hero-content::after {
+    content: url(/images/strike.png);
+    
+    position: absolute;
+    display: inline-block;
+    top: -20px;
+    right: 1px;
+}*/
 
 .hero-content h1 {
     text-transform: uppercase;
@@ -142,9 +177,27 @@ img.friend {
 
 .hero-content p {
     margin-top: 0;
-    font-size: 1.2em;
-    width: 50vw;
+    /*font-size: 1.2em;
+    width: 50vw;*/
     margin: auto;
+    font-weight: 500;
+}
+
+.hero-image {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: url(/images/dev.png);
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    top: 300px;
+    right: 200px;
+}
+
+.dev {
+    width: 100%;
 }
 
 
@@ -155,7 +208,7 @@ img.friend {
 section#about {
     position: relative;
     z-index: 1;
-    background: rgb(51, 51, 53);
+    /* background: rgb(51, 51, 53);*/
     transform: skewY(3deg);
     height: 90vh;
     top: 150px;
@@ -168,22 +221,38 @@ div.about-inner {
 section#projects {
     position: relative;
     z-index: 1;
-    background: rgb(255, 215, 14);
+    /*background: rgb(255, 215, 14);*/
     transform: skewY(3deg);
     height: 90vh;
     top: 35px;
 }
 
 div.projects-inner {
-    transform: skewY(-5deg);
+    transform: skewY(-3deg);
 }
 
-.project-container {
-    padding: 20px;
-    background: white;
+.projects-container {
+    padding: 40px;
+    height: 100vh;
 }
 
 div#footer {
+    position: relative;
     background: rgb(243, 243, 243);
-    height: 40vh;
+    height: 30vh;
+    bottom: 0;
+    z-index: 999;
+    margin-top: 200px;
+}
+
+.footer-container {
+    padding: 20px;
+    background: #524d36;
+}
+
+.profile-link {
+    background: #757573;
+    width: 200px;
+    display: flex;
+    margin: auto;
 }
